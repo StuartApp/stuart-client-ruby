@@ -14,12 +14,12 @@ require 'juwelier'
 Juwelier::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://guides.rubygems.org/specification-reference/ for more options
   gem.name = "stuart-ruby-client"
-  gem.homepage = "http://github.com/maximilientyc/stuart-ruby-client"
+  gem.homepage = "http://github.com/stuartapp/stuart-ruby-client"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
-  gem.email = "maximilien.tyc@gmail.com"
-  gem.authors = ["Maximilien Tyc"]
+  gem.summary = "Stuart API Ruby client"
+  gem.description = "Allow to interract with the Stuart API"
+  gem.email = "engineering@stuart.com"
+  gem.authors = ["Paul Caillau", "Maximilien Tyc"]
 
   # dependencies defined in Gemfile
 end
