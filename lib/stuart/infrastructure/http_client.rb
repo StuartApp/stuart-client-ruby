@@ -9,37 +9,28 @@ module Stuart
       end
 
       def perform_get(resource)
-        perform_request(:get, resource, nil)
+        to_api_response Typhoeus.get(url(resource), headers: default_header)
       end
 
       def perform_post(resource, body)
-        perform_request(:post, resource, body)
+        to_api_response Typhoeus.post(url(resource), headers: default_header, body: body)
       end
 
       private
 
       def url(resource)
-        "#{@authenticator.environment[:base_url]}/#{resource}"
+        "#{@authenticator.environment[:base_url]}#{resource}"
       end
 
       def default_header
         {'Authorization' => "Bearer #{@authenticator.access_token}",
-         'User-Agent' => 'stuart-ruby-client/1.0.0',
+         'User-Agent' => 'stuart-client-ruby/1.0.0',
          'Content-Type' => 'application/json'}
       end
 
-      def perform_request(verb, resource, body)
-        to_api_response Typhoeus::Request.new(
-          url(resource),
-          method: verb,
-          headers: default_header,
-          body: body
-        ).run
-      end
-
-      def to_api_response(typhoeus_response)
-        status_code = typhoeus_response.response_code
-        body = JSON.parse(typhoeus_response.response_body)
+      def to_api_response(response)
+        status_code = response.response_code
+        body = JSON.parse(response.response_body) if response.response_body
         ApiResponse.new(status_code, body)
       end
     end

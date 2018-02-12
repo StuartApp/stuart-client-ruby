@@ -1,0 +1,2 @@
+require 'stuart'
+require 'rspec'
