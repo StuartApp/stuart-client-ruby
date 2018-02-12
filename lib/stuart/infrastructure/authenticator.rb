@@ -2,9 +2,7 @@ require 'oauth2'
 
 module Stuart
   module Infrastructure
-
     class Authenticator
-
       attr_reader :environment
 
       def initialize(environment, api_client_id, api_client_secret)

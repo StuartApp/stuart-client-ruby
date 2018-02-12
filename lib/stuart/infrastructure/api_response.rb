@@ -1,8 +1,6 @@
 module Stuart
   module Infrastructure
-
     class ApiResponse
-
       attr_reader :status_code, :body
 
       def initialize(status_code, body)
@@ -10,10 +8,9 @@ module Stuart
         @body = body
       end
 
-      def success
+      def success?
         @status_code == (200 || 201)
       end
-
     end
   end
 end

@@ -1,6 +1,5 @@
 module Stuart
   module Infrastructure
-
     class Client
       attr_reader :http_client
 
