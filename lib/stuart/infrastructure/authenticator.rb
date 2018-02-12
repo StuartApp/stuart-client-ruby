@@ -7,11 +7,11 @@ module Stuart
 
       def initialize(environment, api_client_id, api_client_secret)
         @environment = environment
-        @provider = OAuth2::Client.new(api_client_id, api_client_secret, site: environment[:base_url])
+        @oauth_client = OAuth2::Client.new(api_client_id, api_client_secret, site: environment[:base_url])
       end
 
       def access_token
-        @provider.client_credentials.get_token.token
+        @access_token ||= @oauth_client.client_credentials.get_token.token
       end
     end
   end
