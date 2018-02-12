@@ -58,7 +58,7 @@ job = {
   }
 }
 
-http_client.perform_post '/v2/jobs/eta', JSON.generate(job)
+http_client.perform_post '/v2/jobs', JSON.generate(job)
 ```
 
 #### Example: get a list of jobs
