@@ -24,7 +24,7 @@ module Stuart
 
       def default_header
         {'Authorization' => "Bearer #{@authenticator.access_token}",
-         'User-Agent' => 'stuart-client-ruby/1.0.0',
+         'User-Agent' => "stuart-client-ruby/#{Stuart::Version::STRING}",
          'Content-Type' => 'application/json'}
       end
 

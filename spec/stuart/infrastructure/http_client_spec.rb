@@ -9,7 +9,7 @@ describe Stuart::Infrastructure::HttpClient do
   let(:http_client) { Stuart::Infrastructure::HttpClient.new(authenticator) }
 
   let(:sample_access_token) { 'some-access-token' }
-  let(:ruby_gem_version) { '1.0.0' }
+  let(:ruby_gem_version) { Stuart::Version::STRING }
 
   before do
     allow(authenticator).to receive(:access_token).and_return(sample_access_token)

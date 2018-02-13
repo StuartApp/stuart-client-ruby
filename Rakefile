@@ -2,6 +2,7 @@
 
 require 'rubygems'
 require 'bundler'
+require './lib/stuart/version'
 begin
   Bundler.setup(:default, :development)
 rescue Bundler::BundlerError => e
@@ -41,10 +42,10 @@ task :default => :test
 
 require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
-  version = File.exist?('VERSION') ? File.read('VERSION') : ""
+  version = Stuart::Version::STRING
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "stuart-ruby-client #{version}"
+  rdoc.title = "stuart-client-ruby #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
