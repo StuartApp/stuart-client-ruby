@@ -14,8 +14,8 @@ require 'rake'
 require 'juwelier'
 Juwelier::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://guides.rubygems.org/specification-reference/ for more options
-  gem.name = "stuart-ruby-client"
-  gem.homepage = "http://github.com/stuartapp/stuart-ruby-client"
+  gem.name = "stuart-client-ruby"
+  gem.homepage = "http://github.com/stuartapp/stuart-client-ruby"
   gem.license = "MIT"
   gem.summary = "Stuart API Ruby client"
   gem.description = "Allow to interract with the Stuart API"
