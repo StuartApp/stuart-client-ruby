@@ -1,5 +1,5 @@
-require 'typhoeus'
-require 'json'
+require "typhoeus"
+require "json"
 
 module Stuart
   module Infrastructure
@@ -23,9 +23,9 @@ module Stuart
       end
 
       def default_header
-        { 'Authorization' => "Bearer #{@authenticator.access_token}",
-          'User-Agent' => "stuart-client-ruby/#{Stuart::Version::STRING}",
-          'Content-Type' => 'application/json' }
+        { "Authorization" => "Bearer #{@authenticator.access_token}",
+          "User-Agent" => "stuart-client-ruby/#{Stuart::Version::STRING}",
+          "Content-Type" => "application/json" }
       end
 
       def to_api_response(response)

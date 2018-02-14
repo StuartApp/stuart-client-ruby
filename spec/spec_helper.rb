@@ -1,2 +1,2 @@
-require 'stuart'
-require 'rspec'
+require "stuart"
+require "rspec"
