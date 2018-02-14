@@ -18,10 +18,10 @@ Juwelier::Tasks.new do |gem|
   gem.homepage = "http://github.com/stuartapp/stuart-client-ruby"
   gem.license = "MIT"
   gem.summary = "Stuart API Ruby client"
-  gem.description = "Allow to interract with the Stuart API"
+  gem.description = "Communicate with the Stuart API"
   gem.email = "engineering@stuart.com"
   gem.authors = ["Paul Caillau", "Maximilien Tyc"]
-
+  gem.version = Stuart::Version::STRING
   # dependencies defined in Gemfile
 end
 Juwelier::RubygemsDotOrgTasks.new
@@ -42,10 +42,8 @@ task :default => :test
 
 require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
-  version = Stuart::Version::STRING
-
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "stuart-client-ruby #{version}"
+  rdoc.title = "stuart-client-ruby #{Stuart::Version::STRING}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
