@@ -11,7 +11,7 @@ describe Stuart::Infrastructure::HttpClient do
   let(:access_token) { 'some-access-token' }
   let(:ruby_gem_version) { Stuart::Version::STRING }
   let(:resource) { '/some-endpoint' }
-  
+
   let(:expected_headers) do
     {
       'Authorization' => "Bearer #{access_token}",
