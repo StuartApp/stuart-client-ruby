@@ -4,8 +4,6 @@
 For a complete documentation of all endpoints offered by the Stuart API, you can visit [Stuart API documentation](https://stuart.api-docs.io).
 
 ## Install
-Via Composer:
-
 ``` bash
 $ gem install stuart-client-ruby
 ```
