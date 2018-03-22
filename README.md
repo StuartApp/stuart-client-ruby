@@ -36,7 +36,7 @@ job = {
         contact: {
           firstname: "Martin",
           lastname: "Pont",
-          phone: "+33698348756'",
+          phone: "+33698348756",
           company: "KFC Paris Barbès"
         }
       }
