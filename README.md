@@ -13,6 +13,7 @@ $ gem install stuart-client-ruby
 ### Initialize HTTP client
 
 ```ruby
+require 'stuart-client-ruby'
 environment = Stuart::Infrastructure::Environment::SANDBOX
 api_client_id = 'c6058849d0a056fc743203acb8e6a850dad103485c3edc51b16a9260cc7a7689' # can be found here: https://admin-sandbox.stuart.com/client/api
 api_client_secret = 'aa6a415fce31967501662c1960fcbfbf4745acff99acb19dbc1aae6f76c9c618' # can be found here: https://admin-sandbox.stuart.com/client/api

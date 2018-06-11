@@ -25,17 +25,17 @@ Gem::Specification.new do |s|
     "LICENSE.txt",
     "README.md",
     "Rakefile",
-    "lib/stuart.rb",
-    "lib/stuart/.DS_Store",
-    "lib/stuart/client.rb",
-    "lib/stuart/infrastructure/api_response.rb",
-    "lib/stuart/infrastructure/authenticator.rb",
-    "lib/stuart/infrastructure/environment.rb",
-    "lib/stuart/infrastructure/http_client.rb",
-    "lib/stuart/version.rb",
+    "lib/stuart-client-ruby.rb",
+    "lib/stuart-client-ruby/.DS_Store",
+    "lib/stuart-client-ruby/client.rb",
+    "lib/stuart-client-ruby/infrastructure/api_response.rb",
+    "lib/stuart-client-ruby/infrastructure/authenticator.rb",
+    "lib/stuart-client-ruby/infrastructure/environment.rb",
+    "lib/stuart-client-ruby/infrastructure/http_client.rb",
+    "lib/stuart-client-ruby/version.rb",
     "spec/spec_helper.rb",
-    "spec/stuart/infrastructure/authenticator_spec.rb",
-    "spec/stuart/infrastructure/http_client_spec.rb"
+    "spec/stuart-client-ruby/infrastructure/authenticator_spec.rb",
+    "spec/stuart-client-ruby/infrastructure/http_client_spec.rb"
   ]
   s.homepage = "http://github.com/stuartapp/stuart-client-ruby"
   s.licenses = ["MIT"]

@@ -2,7 +2,7 @@
 
 require "rubygems"
 require "bundler"
-require "./lib/stuart/version"
+require "./lib/stuart-client-ruby/version"
 begin
   Bundler.setup(:default, :development)
 rescue Bundler::BundlerError => e
