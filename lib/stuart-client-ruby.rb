@@ -1,0 +1,5 @@
+require "stuart-client-ruby/infrastructure/environment"
+require "stuart-client-ruby/infrastructure/api_response"
+require "stuart-client-ruby/infrastructure/authenticator"
+require "stuart-client-ruby/infrastructure/http_client"
+require "stuart-client-ruby/version"

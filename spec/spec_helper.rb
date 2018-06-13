@@ -1,2 +1,2 @@
-require "stuart"
+require "stuart-client-ruby"
 require "rspec"
