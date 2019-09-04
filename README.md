@@ -1,4 +1,4 @@
-[ ![Codeship Status for StuartApp/stuart-client-ruby](https://app.codeship.com/projects/47814430-f49c-0135-ebec-46d7136b8c34/status?branch=master)](https://app.codeship.com/projects/273162)
+[![Codeship Status for StuartApp/stuart-client-ruby](https://app.codeship.com/projects/bacc9100-b159-0137-6e98-0e2ebd2815ea/status?branch=master)](https://app.codeship.com/projects/363050)
 
 # Stuart Ruby Client
 For a complete documentation of all endpoints offered by the Stuart API, you can visit [Stuart API documentation](https://stuart.api-docs.io).
