@@ -1,7 +1,7 @@
 [![Codeship Status for StuartApp/stuart-client-ruby](https://app.codeship.com/projects/bacc9100-b159-0137-6e98-0e2ebd2815ea/status?branch=master)](https://app.codeship.com/projects/363050)
 
 # Stuart Ruby Client
-For a complete documentation of all endpoints offered by the Stuart API, you can visit [Stuart API documentation](https://stuart.api-docs.io).
+For a complete documentation of all endpoints offered by the Stuart API, you can visit [Stuart API documentation](https://api-docs.stuart.com/).
 
 ## Install
 ``` bash
@@ -15,8 +15,8 @@ $ gem install stuart-client-ruby
 ```ruby
 require 'stuart-client-ruby'
 environment = Stuart::Infrastructure::Environment::SANDBOX
-api_client_id = 'c6058849d0a056fc743203acb8e6a850dad103485c3edc51b16a9260cc7a7689' # can be found here: https://admin-sandbox.stuart.com/client/api
-api_client_secret = 'aa6a415fce31967501662c1960fcbfbf4745acff99acb19dbc1aae6f76c9c618' # can be found here: https://admin-sandbox.stuart.com/client/api
+api_client_id = 'c6058849d0a056fc743203acb8e6a850dad103485c3edc51b16a9260cc7a7689' # can be found here: https://admin.sandbox.stuart.com/client/api
+api_client_secret = 'aa6a415fce31967501662c1960fcbfbf4745acff99acb19dbc1aae6f76c9c618' # can be found here: https://admin.sandbox.stuart.com/client/api
 auth = Stuart::Infrastructure::Authenticator.new(environment, api_client_id, api_client_secret)
 
 http_client = Stuart::Infrastructure::HttpClient.new(auth)
