@@ -19,7 +19,7 @@ jobs:
 
       - name: Build gem
         run: |
-          rake build
+          bundle exec rake build
 
       # - name: Publish to RubyGems
       #   run: |
