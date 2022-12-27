@@ -21,11 +21,11 @@ jobs:
         run: |
           bundle exec rake build
 
-      # - name: Publish to RubyGems
-      #   run: |
-      #     cat << EOF > ~/.gem/credentials
-      #     ---
-      #     :rubygems_api_key: ${{ secrets.RUBYGEMS_API_KEY }}
-      #     EOF
+      - name: Publish to RubyGems
+        run: |
+          cat << EOF > ~/.gem/credentials
+          ---
+          :rubygems_api_key: ${{ secrets.RUBYGEMS_API_KEY }}
+          EOF
 
-      #     rake release
+          bundle exec rake release
