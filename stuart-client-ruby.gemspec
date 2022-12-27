@@ -4,9 +4,11 @@
 # -*- encoding: utf-8 -*-
 # stub: stuart-client-ruby 1.1.0 ruby lib
 
+require_relative './lib/stuart-client-ruby/version'
+
 Gem::Specification.new do |s|
   s.name = "stuart-client-ruby"
-  s.version = "1.1.1"
+  s.version = Stuart::Version::STRING
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
