@@ -28,4 +28,4 @@ jobs:
           :rubygems_api_key: ${{ secrets.RUBYGEMS_API_KEY }}
           EOF
 
-          bundle exec rake release
+          gem push pkg/stuart-client-ruby-*.gem
