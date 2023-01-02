@@ -23,10 +23,10 @@ jobs:
 
       - name: Publish to RubyGems
         run: |
-          chmod 0600 ~/.gem/credentials
           cat << EOF > ~/.gem/credentials
           ---
           :rubygems_api_key: ${{ secrets.RUBYGEMS_API_KEY }}
           EOF
 
+          chmod 0600 ~/.gem/credentials
           gem push pkg/stuart-client-ruby-*.gem
