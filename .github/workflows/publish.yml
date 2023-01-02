@@ -1,0 +1,32 @@
+name: Ruby gem
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.7' # Not needed with a .ruby-version file
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+
+      - name: Build gem
+        run: |
+          bundle exec rake build
+
+      - name: Publish to RubyGems
+        run: |
+          cat << EOF > ~/.gem/credentials
+          ---
+          :rubygems_api_key: ${{ secrets.RUBYGEMS_API_KEY }}
+          EOF
+
+          chmod 0600 ~/.gem/credentials
+          gem push pkg/stuart-client-ruby-*.gem

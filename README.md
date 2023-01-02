@@ -67,3 +67,15 @@ http_client.perform_post '/v2/jobs', JSON.generate(job)
 ```ruby
 http_client.perform_get('/v2/jobs')
 ```
+
+### Release process
+
+1. Review the Gem version in lib/stuart-client-ruby/version.rb
+2. Create and publish a Git tag with the version defined in lib/stuart-client-ruby/version.rb
+Example:
+```
+git tag v1.2.0-rc.1
+git push origin --tags
+```
+
+3. The workflow [workflows/publish.yml](https://github.com/StuartApp/stuart-client-ruby/actions/workflows/publish.yml) should start and publish the new version to Rubygems https://rubygems.org/gems/stuart-client-ruby
